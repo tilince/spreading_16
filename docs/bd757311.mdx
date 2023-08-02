@@ -8,3 +8,46 @@ import { SH, STitle, SImage, SCodeBlock, SCodeBlockTab, SCallout, SCalloutHeader
 UntitledUntitledUntitledUntitledUntitledUntitled
 </STitle>
 
+可以使用一个，两个或三个值来指定 `flex`属性。
+
+**单值语法**: 值必须为以下其中之一：
+
+* 一个无单位**数 ([<u>`<number>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/number))**: 它会被当作 `flex:<number> 1 0;` [<u>`<flex-shrink>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink)的值被假定为 1，然后[<u>`<flex-basis>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 的值被假定为`0`。
+* 一个有效的 **宽度 ([<u>`width`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width))** 值：它会被当作 `<flex-basis>` 的值。
+* 关键字[`none`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#none)，[`auto`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex#auto)或`initial`.
+
+**双值语法**: 第一个值必须为一个无单位数，并且它会被当作 [<u>`<flex-grow>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 的值。第二个值必须为以下之一：
+
+* 一个无单位数：它会被当作 [<u>`<flex-shrink>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 的值。
+* 一个有效的宽度值：它会被当作 [<u>`<flex-basis>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 的值。
+
+**三值语法：**
+
+* 第一个值必须为一个无单位数，并且它会被当作 [<u>`<flex-grow>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 的值。
+* 第二个值必须为一个无单位数，并且它会被当作 [<u>`<flex-shrink>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 的值。
+* 第三个值必须为一个有效的宽度值，并且它会被当作 [<u>`<flex-basis>`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 的值。
+
+<SH level="3" id="h-5yw5yc8">
+取值
+</SH>
+
+
+`initial`
+
+元素会根据自身宽高设置尺寸。它会缩短自身以适应 flex 容器，但不会伸长并吸收 flex 容器中的额外自由空间来适应 flex 容器。相当于将属性设置为"`flex: 0 1 auto`"。
+
+`auto`
+
+元素会根据自身的宽度与高度来确定尺寸，但是会伸长并吸收 flex 容器中额外的自由空间，也会缩短自身来适应 flex 容器。这相当于将属性设置为 "`flex: 1 1 auto`".
+
+`none`
+
+元素会根据自身宽高来设置尺寸。它是完全非弹性的：既不会缩短，也不会伸长来适应 flex 容器。相当于将属性设置为"`flex: 0 0 auto`"。
+
+`<'flex-grow'>`
+
+定义 flex 项目的 [<u>`flex-grow`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 。负值无效。省略时默认值为 1。 (初始值为 `0`)
+
+`<'flex-shrink'>`
+
+定义 flex 元素的 [<u>`flex-shrink`</u>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 。负值无效。省略时默认值为`1`。 (初始值为 `1`)
