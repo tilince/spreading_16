@@ -5,6 +5,9 @@ import { SH, STitle, SImage, SCodeBlock, SCodeBlockTab, SCallout, SCalloutHeader
 {/* import-end */}
    
 <STitle>
-          
+BeforeUnloadEvent
 </STitle>
 
+**`beforeunload`** 事件触发于 window、document 和它们的资源即将卸载时。
+
+当事件属性 `returnValue` 被赋值为非空字符串时，会弹出一个对话框，让用户确认是否离开页面（示例如下）。否则，事件被静默处理。一些浏览器实现仅在框架或内置框架接收到用户手势或交互时才显示对话框。在 [<u>浏览器兼容性</u>](https://developer.mozilla.org/zh-CN/docs/Web/API/BeforeUnloadEvent#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7) 中查看更多信息。
